@@ -1,0 +1,174 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "creator",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "daoAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "DAOCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "CREATION_FEE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_owners",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_confirmationsRequired",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_graceperiod",
+						"type": "uint8"
+					}
+				],
+				"name": "createDAO",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "factoryOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "userDAOs",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
+					}
+				],
+				"name": "withdrawEther",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SomniaDAOFactory.sol": "SomniaDAOFactory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SomniaConsensusDAO.sol": {
+			"keccak256": "0xb4e5bfff1d466e0734e418b26917c76530cbe6db5cf2bee0b8d928d41914c7cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b9596702e869022cc266c9f41b192833229305c927acc6236ced9d86f6c563a7",
+				"dweb:/ipfs/QmeoKFkgJSNB8Zea4YeXhic8eoJviyC8xaLaW7opgjiNcj"
+			]
+		},
+		"contracts/SomniaDAOFactory.sol": {
+			"keccak256": "0xa90e09164daddd96873e86ceb13b115221d097676022a171bf3799121b0b3246",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c58fb3a149d98fbbc0bcb8885ea36060463bbf6c54871ba2b174f43b20d06441",
+				"dweb:/ipfs/QmNc7gpJAzXe26XAvqGSnDfRFbzkNJAiu8uSizCiRck4zK"
+			]
+		}
+	},
+	"version": 1
+}
