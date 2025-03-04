@@ -7,7 +7,7 @@ module.exports = {
   solidity: "0.8.28",
   networks: {
     'somnia-testnet': {
-      url: "https://somnia-poc.w3us.site/api/eth-rpc", 
+      url: "https://dream-rpc.somnia.network", 
       accounts: [process.env.PRIVATE_KEY], 
     },
   },
@@ -21,7 +21,7 @@ module.exports = {
     customChains: [
       {
         network: "somnia-testnet",
-        chainId: 50311, 
+        chainId: 50312, 
         urls: {
           apiURL: "https://somnia-poc.w3us.site/api", 
           browserURL: "https://somnia-poc.w3us.site", 

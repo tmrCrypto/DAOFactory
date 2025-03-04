@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.28;
+pragma solidity ^0.8.0;
 
 contract SomniaConsensusDAO {
 
-    uint8 confirmationsRequired;
+    uint confirmationsRequired;
     uint immutable GRACE_PERIOD;
     address[] public owners;
     
@@ -32,8 +32,8 @@ contract SomniaConsensusDAO {
         _;
     }
 
-    constructor(address[] memory _owners, uint grace_period_to_hours, uint8 _confirmationsRequired){
-        require(_owners.length >= _confirmationsRequired,"Minimum 3 owners");
+    constructor(address[] memory _owners, uint _confirmationsRequired, uint grace_period_to_hours){
+        require(_owners.length >= _confirmationsRequired, "Minimum 3 owners");
         for (uint i; i < _owners.length; i++){
             address nextOwner = _owners[i];
 

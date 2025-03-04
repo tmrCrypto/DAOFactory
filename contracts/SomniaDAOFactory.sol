@@ -5,7 +5,7 @@ import {SomniaConsensusDAO} from "./SomniaConsensusDAO.sol";
 
 contract SomniaDAOFactory {
 
-    uint public constant CREATION_FEE = 0.0001 ether;
+
     address public factoryOwner;
     mapping(address => address[]) public userDAOs;
 
@@ -15,8 +15,7 @@ contract SomniaDAOFactory {
         factoryOwner = msg.sender;
     }
 
-    function createDAO(address[] memory _owners, uint _confirmationsRequired, uint8 _graceperiod) external payable {
-        require(msg.value >= CREATION_FEE, "Pay 0.1 STT");
+    function createDAO(address[] memory _owners, uint _confirmationsRequired, uint _graceperiod) external  {
         SomniaConsensusDAO newDAO = new SomniaConsensusDAO(_owners, _confirmationsRequired, _graceperiod);
         userDAOs[msg.sender].push(address(newDAO));
         emit DAOCreated(msg.sender, address(newDAO), block.timestamp);
@@ -33,5 +32,5 @@ contract SomniaDAOFactory {
     }
 
 
-    receive() external payable {}
 }
+
