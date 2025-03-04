@@ -21,7 +21,6 @@ The `SomniaDAOFactory` is a factory contract that deploys instances of `SomniaCo
 #### Functions
 - **`createDAO(address[] memory _owners, uint _confirmationsRequired, uint8 _graceperiod)` (external, payable)**:
   - Creates a new `SomniaConsensusDAO` instance with the specified owners, confirmation threshold, and grace period.
-  - Requires payment of `CREATION_FEE` (0.0001 STT) to deploy.
   - Emits `DAOCreated` event with the creator’s address, DAO address, and timestamp.
   - Stores the DAO address in a mapping for the creator (`userDAOs`).
 
