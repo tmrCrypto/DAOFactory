@@ -5,7 +5,7 @@ import {SomniaConsensusDAO} from "./SomniaConsensusDAO.sol";
 
 contract SomniaDAOFactory {
 
-    uint public constant CREATION_FEE = 1 ether;
+    uint public constant CREATION_FEE = 0.0001 ether;
     address public factoryOwner;
     mapping(address => address[]) public userDAOs;
 
